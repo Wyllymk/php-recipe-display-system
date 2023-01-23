@@ -7,7 +7,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap');
 html {
-  font-size: 100%;
+
 } /*16px*/
 
 :root {
@@ -70,6 +70,8 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: var(--textColor);
+  margin:0;
+  padding0;
 }
 
 p {
@@ -290,7 +292,7 @@ Navbar
   font-size: 1.25rem;
 }
 .nav-links {
-  height: 0;
+  /* height: 0; */
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -301,7 +303,8 @@ Navbar
 }
 
 .nav-link {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
   text-align: center;
   font-size: 1.25rem;
   text-transform: capitalize;
@@ -311,12 +314,51 @@ Navbar
   border-top: 1px solid var(--grey-500);
   transition: var(--transition);
 }
+
 .nav-link:hover {
   color: var(--primary-500);
 }
 
 .contact-link a {
   padding: 0.15rem 1rem;
+}
+
+.search-form {
+	width: 80%;
+	margin: 0 auto;
+  display: flex;
+	flex-wrap: wrap;
+}
+input[type="search"] {
+	box-sizing: border-box;
+	background: #E9E9E9;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 0.35em 0.75em;
+	border: none;
+	font-size: 1.1em;
+	text-decoration: none;
+	line-height: normal;
+	max-height: 3em;
+  flex: 2 0 250px;
+}
+button[type="submit"] {
+	box-sizing: border-box;
+	border-radius: 0px 2px 2px 0px;
+	background: #8B798C;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: white;
+	padding: 0.35em 0.75em;
+	border: none;
+	font-size: 1.1em;
+	text-decoration: none;
+	cursor: pointer;	
+  flex: 1 0 90px;
+}
+button[type="submit"]:hover {
+	background: #C17CCF;
 }
 
 @media screen and (min-width: 992px) {
@@ -382,6 +424,7 @@ Footer
   justify-content: center;
   background: var(--black);
   color: var(--white);
+  margin: 0px;
 }
 .page-footer h5 {
   margin-top: 0;
@@ -404,7 +447,7 @@ Hero
   height: 40vh;
   position: relative;
   margin-bottom: 2rem;
-  background: url('../assets/main.jpeg') center/cover no-repeat;
+  background: url('../assets/images/main.jpeg') center/cover no-repeat;
   border-radius: var(--borderRadius);
 }
 .hero-container {
