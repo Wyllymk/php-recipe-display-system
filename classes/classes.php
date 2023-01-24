@@ -6,18 +6,18 @@ class Recipe {
     public $image_url;
     public $prep_time;
     public $cook_time;
-    // public $description;
-	// public $ingredients;
-	// public $cookingEquipment;
+    public $description;
+	public $ingredients;
+	public $cookingEquipment;
 
-    public function __construct($name, $image_url, $prep_time, $cook_time) {
+    public function __construct($name, $image_url, $prep_time, $cook_time, $description, $ingredients, $cookingEquipment) {
         $this->name = $name;
         $this->image_url = $image_url;
         $this->prep_time = $prep_time;
         $this->cook_time = $cook_time;
-        // $this->description = $description;
-        // $this->ingredients = $ingredients;
-        // $this->cookingEquipment = $cookingEquipment;
+        $this->description = $description;
+        $this->ingredients = $ingredients;
+        $this->cookingEquipment = $cookingEquipment;
     }
 }
 

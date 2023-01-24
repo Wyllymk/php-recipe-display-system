@@ -2,24 +2,26 @@
 include 'templates/header.php';
 include 'classes/classes.php';
 
-$object = new RecipeDisplay();
-$new_array = $object->recipes;
+/* Creating a new instance of the RecipeDisplay class. */
+$recipe_display = new RecipeDisplay($recipe_objects);
 
-// var_dump($new_array);
-// echo json_encode($new_array);
+// var_dump($recipe_display);
+// echo json_encode($recipe_display);
 
 
 if(isset($_GET['recipe']) && !(empty(trim($_GET['recipe'])))) {
     $slug = $_GET['recipe'];
     /* Searching for a recipe whose title matches the slug. */
-    foreach ($new_array as $recipe) {/* Looping through the array of recipes and assigning each recipe to the variable . */
+    foreach ($recipe_objects as $recipe) {/* Looping through the array of recipes and assigning each recipe to the variable . */
       $result = stripos($recipe->name, $slug) !== false; /*Searching for a recipe whose title matches the slug*/
       if ($result){ /*Fetching the details of the recipe found*/
-      '<a href="view.php?recipe=' . $recipe->name . '" class="recipe">';
-      '<img src="' . $recipe->image_url . '" class="img recipe-img" alt="">';
-      '<h5>' . $recipe->name . '</h5>';
-      '<p>Prep : ' . $recipe->prep_time . 'min | Cook : ' . $recipe->cook_time . 'min</p>';
-      '</a>';
+          $image=$recipe->image_url;
+          $name=$recipe->name;
+          $prep_time=$recipe->prep_time;
+          $cook_time=$recipe->cook_time;
+          $description=$recipe->description;
+          $ingredients=$recipe->ingredients;
+          $cookingEquipment=$recipe->cookingEquipment;
       }
   }
 } 
@@ -30,18 +32,12 @@ if(isset($_GET['recipe']) && !(empty(trim($_GET['recipe'])))) {
       <div class="recipe-page">
         <section class="recipe-hero">
           <img
-            src="<?php echo $recipe->image_url?>"
+            src="<?php echo $image?>"
             class="img recipe-hero-img"
           />
           <article class="recipe-info">
-            <h2><?php echo $recipe->name;?></h2>
-            <p>
-            Wake up on the right side of the bed with a stack of sweet, 
-            cozy, and simple banana pancakes. This top-rated banana pancake 
-            recipe is easy to make and it comes together in just 15 minutes, 
-            so you don't have to wake up early to enjoy a satisfying breakfast. 
-            Learn how to make, store, and serve the best banana pancakes ever. 
-            </p>
+            <h2><?php echo $name;?></h2>
+            <p><?php echo $description;?></p>
             <div class="recipe-icons">
               <article>
                 <i class="fas fa-clock"></i>
@@ -127,5 +123,3 @@ if(isset($_GET['recipe']) && !(empty(trim($_GET['recipe'])))) {
       </div>
     </main>
     <?php include 'templates/footer.php';?>
-</body>
-</html>
