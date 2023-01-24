@@ -124,7 +124,12 @@ $recipe12=new Recipe(
 
 
 $recipe_objects = [$recipe1, $recipe2, $recipe3, $recipe4, $recipe5, $recipe6, 
-                  $recipe7, $recipe8, $recipe9, $recipe10, $recipe11, $recipe12];
-$recipe_display = new RecipeDisplay($recipe_objects);
+                   $recipe7, $recipe8, $recipe9, $recipe10, $recipe11, $recipe12,];
+if(isset($_POST['search'])){
+    $search_query = $_POST['search'];
+    $recipe_display = new RecipeDisplay($recipe_objects, $search_query);
+}else{
+    $recipe_display = new RecipeDisplay($recipe_objects);
+}
 
 ?>

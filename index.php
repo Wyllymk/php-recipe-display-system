@@ -18,13 +18,14 @@ include 'templates/header.php';
     <section class="recipes-container">
       <!-- tag container -->
       <?php 
-      $recipeDisplay = new RecipeDisplay();
+      $recipeDisplay = new RecipeDisplay($recipe_objects);
       $recipeDisplay->displayTags();
       ?>
       <!-- end of tag container -->
       <?php
-        $recipeDisplay = new RecipeDisplay();
-        $recipeDisplay->displayRecipes();
+        $recipe_display = new RecipeDisplay($recipe_objects);
+        $recipe_display->displayRecipes();
+        
       ?>
     </section>
   </main>
