@@ -1,5 +1,5 @@
 <?php 
-include 'classes/recipe.php';
+include 'classes/classes.php';
 include 'templates/header.php';
 ?>
 

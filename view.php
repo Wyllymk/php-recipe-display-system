@@ -1,13 +1,18 @@
 <?php
 include 'templates/header.php';
-include 'classes/recipe.php';
+include 'classes/classes.php';
 
+$object = new RecipeDisplay();
+$new_array = $object->recipes;
 
+// var_dump($new_array);
+// echo json_encode($new_array);
 
 
 if(isset($_GET['recipe']) && !(empty(trim($_GET['recipe'])))) {
     $slug = $_GET['recipe'];
-    foreach ($new_array as $recipe) {
+    /* Searching for a recipe whose title matches the slug. */
+    foreach ($new_array as $recipe) {/* Looping through the array of recipes and assigning each recipe to the variable . */
       $result = stripos($recipe->name, $slug) !== false; /*Searching for a recipe whose title matches the slug*/
       if ($result){ /*Fetching the details of the recipe found*/
       '<a href="view.php?recipe=' . $recipe->name . '" class="recipe">';
