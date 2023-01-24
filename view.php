@@ -2,8 +2,7 @@
 include 'templates/header.php';
 include 'classes/recipe.php';
 
-$object = new RecipeDisplay();
-$new_array=($object->recipes);
+
 
 
 if(isset($_GET['recipe']) && !(empty(trim($_GET['recipe'])))) {

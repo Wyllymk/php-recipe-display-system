@@ -81,5 +81,6 @@ class RecipeDisplay {
         echo '</div>';
     }
 }
-
+$object = new RecipeDisplay();
+$new_array=($object->recipes);
 ?>
