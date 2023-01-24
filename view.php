@@ -42,17 +42,17 @@ if(isset($_GET['recipe']) && !(empty(trim($_GET['recipe'])))) {
               <article>
                 <i class="fas fa-clock"></i>
                 <h5>prep time</h5>
-                <p>30 min.</p>
+                <p><?php echo $prep_time .' mins';?></p>
               </article>
               <article>
                 <i class="far fa-clock"></i>
                 <h5>cook time</h5>
-                <p>15 min.</p>
+                <p><?php echo $cook_time .' mins';?></p>
               </article>
               <article>
                 <i class="fas fa-user-friends"></i>
                 <h5>serving</h5>
-                <p>6 servings</p>
+                <p>3 servings</p>
               </article>
             </div>
             
