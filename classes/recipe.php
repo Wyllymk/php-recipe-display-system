@@ -17,8 +17,8 @@ $recipe2=new Recipe(
     20, 
     10,
     "The ribs have a lot to offer: Iron for blood formation, protein for strong muscles and important B vitamins for energy metabolism.",
-	"3 pounds baby back ribs, membranes removed,½ cup finely chopped onion,¼ cup olive oil,¼ cup fresh lemon juice,¼ cup chopped fresh oregano,1 tablespoon liquid honey,5 cloves garlic",
-	"resealable plastic bag,refrigerator,oven, baking sheet"
+	"3 pounds baby back ribs,<br><hr> membranes removed, <br><hr> ½ cup finely chopped onion <br><hr> ¼ cup olive oil, <br><hr> ¼ cup fresh lemon juice, <br><hr>¼ cup chopped fresh oregano, <br><hr> 1 tablespoon liquid honey, <br><hr> 5 cloves garlic",
+	"resealable plastic bag, <br><hr>  refrigerator, <br><hr>  oven, <br><hr> baking sheet"
 );
 
 $recipe3=new Recipe(

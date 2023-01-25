@@ -18,9 +18,6 @@
         <a href="index.php" class="nav-logo">
           <img src="./assets/images/logo.png" alt="simply recipes" />
         </a>
-        <button class="nav-btn btn">
-          <i class="fas fa-align-justify"></i>
-        </button>
       </div>
       <div class="nav-links">
         <div class="search-container">
@@ -28,9 +25,6 @@
           <input type="search" name="search" placeholder="Search this site" class="search-input" id="search-input">
           <button type="submit" class="search-btn" id="search-btn" name="submit">Search</button>
         </form>
-        </div>
-        <div class="nav-link contact-link">
-          <a href="#" class="btn"> contact </a>
         </div>
       </div>
     </div>

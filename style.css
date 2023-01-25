@@ -381,6 +381,7 @@ button[type="submit"]:hover {
   .nav-links {
     height: auto !important;
     flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
   }
@@ -393,6 +394,12 @@ button[type="submit"]:hover {
   .contact-link {
     margin-right: 0;
     margin-left: auto;
+  }
+  .search-container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: row wrap;
   }
 }
 /*
@@ -777,13 +784,17 @@ Recipe Template
 }
 
 .single-ingredient {
-  border-bottom: 2px solid var(--grey-300);
-  padding-bottom: 0.75rem;
+  /* border-bottom: 2px solid var(--grey-300);
+  padding-bottom: 0.75rem; */
+  color: var(--grey-700);
+}
+hr{
+  border: 1px solid var(--grey-300);
   color: var(--grey-700);
 }
 .single-tool {
-  border-bottom: 2px solid var(--grey-300);
-  padding-bottom: 0.75rem;
+  /* border-bottom: 2px solid var(--grey-300);
+  padding-bottom: 0.75rem; */
   color: var(--primary-500);
   text-transform: capitalize;
 }

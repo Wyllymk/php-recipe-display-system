@@ -107,16 +107,11 @@ if(isset($_GET['recipe']) && !(empty(trim($_GET['recipe'])))) {
           <article class="second-column">
             <div>
               <h4>ingredients</h4>
-              <p class="single-ingredient">1 cup all-purpose flour</p>
-              <p class="single-ingredient">1 tablespoon white sugar</p>
-              <p class="single-ingredient">1 cup skim milk</p>
+              <p class="single-ingredient"><?php echo $ingredients;?></p>
             </div>
             <div>
               <h4>cooking equipment</h4>
-              <p class="single-tool">Hand Blender</p>
-              <p class="single-tool">Large Heavy Pot With Lid</p>
-              <p class="single-tool">Measuring Spoons</p>
-              <p class="single-tool">Measuring Cups</p>
+              <p class="single-tool"><?php echo $cookingEquipment;?></p>
             </div>
           </article>
         </section>
